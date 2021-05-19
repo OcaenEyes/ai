@@ -21544,16 +21544,16 @@ readers do not read off random characters that represent icons */
   --success: #27c24c;
   --success-onHover: #21a240;
   --success-onActive: #1e983b;
-  --info: #23b7e5;
-  --info-onHover: #18a0ca;
-  --info-onActive: #1797be;
+  --info: #000;
+  --info-onHover: #000;
+  --info-onActive: #000;
   --warning: #fad733;
   --warning-onHover: #f9d00e;
   --warning-onActive: #f4ca06;
   --danger: #f05050;
   --danger-onHover: #ed2d2d;
   --danger-onActive: #ec2121;
-  --light: #edf1f2;
+  --light: #f4f4f4;
   --dark: #000;
   --fontFamilyMonospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;

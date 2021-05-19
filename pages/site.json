@@ -6,63 +6,63 @@
       {
         "label": "Home",
         "url": "/",
-        "redirect": "/index/1"
+        "redirect": "/index"
       },
       {
-        "label": "示例",
+        "label": "NLP",
         "children": [
           {
-            "label": "页面A",
+            "label": "内容风控",
             "url": "index",
             "schema": {
               "type": "page",
-              "title": "页面A",
-              "body": "页面A"
+              "title": "内容风控",
+              "body": "内容风控"
             },
             "children": [
               {
-                "label": "页面A-1",
+                "label": "情感识别-1",
                 "url": "1",
                 "schema": {
                   "type": "page",
-                  "title": "页面A-1",
-                  "body": "页面A-1"
+                  "title": "情感识别-1",
+                  "body": "情感识别-1"
                 }
               },
               {
-                "label": "页面A-2",
+                "label": "情感识别-2",
                 "url": "2",
                 "schema": {
                   "type": "page",
-                  "title": "页面A-2",
-                  "body": "页面A-2"
+                  "title": "情感识别-2",
+                  "body": "情感识别-2"
                 }
               },
               {
-                "label": "页面A-3",
+                "label": "情感识别-3",
                 "url": "3",
                 "schema": {
                   "type": "page",
-                  "title": "页面A-3",
-                  "body": "页面A-3"
+                  "title": "情感识别-3",
+                  "body": "情感识别-3"
                 }
               }
             ]
           },
           {
-            "label": "页面B",
+            "label": "内容生成",
             "schema": {
               "type": "page",
-              "title": "页面B",
-              "body": "页面B"
+              "title": "内容生成",
+              "body": "内容生成"
             }
           },
           {
-            "label": "页面C",
+            "label": "内容相似",
             "schema": {
               "type": "page",
-              "title": "页面C",
-              "body": "页面C"
+              "title": "内容相似",
+              "body": "内容相似"
             }
           },
           {
@@ -98,22 +98,22 @@
         ]
       },
       {
-        "label": "分组2",
+        "label": "CV",
         "children": [
           {
-            "label": "用户管理",
+            "label": "图像识别",
             "schema": {
               "type": "page",
-              "title": "用户管理",
-              "body": "页面C"
+              "title": "图像识别",
+              "body": "图像识别"
             }
           },
           {
-            "label": "外部链接",
+            "label": "图像识别",
             "link": "http://baidu.gitee.io/amis"
           },
           {
-            "label": "部门管理",
+            "label": "图像识别",
             "schemaApi": "/api/mock2/service/form?tpl=tpl3"
           }
         ]
