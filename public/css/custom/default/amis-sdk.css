@@ -21553,7 +21553,7 @@ readers do not read off random characters that represent icons */
   --danger: #f05050;
   --danger-onHover: #ed2d2d;
   --danger-onActive: #ec2121;
-  --light: #f4f4f4;
+  --light: #fcfcfc;
   --dark: #000;
   --fontFamilyMonospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
@@ -21573,7 +21573,7 @@ readers do not read off random characters that represent icons */
   --text--muted-color: #99a6ad;
   --text--loud-color: #414c52;
   --pre-color: var(--text-color);
-  --borderColor: #d1d5db;
+  --borderColor: #ebebeb;
   --borderColorLight: #dfe2e6;
   --borderColorDarken: #b4bbc5;
   --borderRadius: 0.142rem;
@@ -26208,6 +26208,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-AppBcn {
+  display:none;
   height: 1.875rem;
   line-height: 1.875rem;
   font-size: 0.75rem;
@@ -38634,8 +38635,9 @@ readers do not read off random characters that represent icons */
  */
 
 .amis-scope .bg-light {
-  background-color: #edf1f2;
+  background-color: #fff;
   color: #58666e;
+  border-top: var(--borderWidth) solid var(--borderColor);
 }
 
 .amis-scope .bg-light.lt,
