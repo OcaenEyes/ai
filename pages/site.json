@@ -21,30 +21,34 @@
             },
             "children": [
               {
-                "label": "情感识别-1",
+                "label": "评论情感识别",
                 "url": "1",
                 "schema": {
                   "type": "page",
-                  "title": "情感识别-1",
-                  "body": "情感识别-1"
+                  "title": "评论情感识别",
+
+                  "body": {
+                    "type": "form",
+                    "title": "",
+                    "wrapWithPanel": false,
+                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/form/saveForm",
+                    "controls": [
+                      {
+                        "type": "text",
+                        "name": "name",
+                        "label": "姓名："
+                      }
+                    ]
+                  }
                 }
               },
               {
-                "label": "情感识别-2",
+                "label": "垃圾邮件识别",
                 "url": "2",
                 "schema": {
                   "type": "page",
-                  "title": "情感识别-2",
-                  "body": "情感识别-2"
-                }
-              },
-              {
-                "label": "情感识别-3",
-                "url": "3",
-                "schema": {
-                  "type": "page",
-                  "title": "情感识别-3",
-                  "body": "情感识别-3"
+                  "title": "垃圾邮件识别",
+                  "body": "垃圾邮件识别"
                 }
               }
             ]
