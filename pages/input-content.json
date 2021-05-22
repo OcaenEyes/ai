@@ -1,0 +1,27 @@
+{
+    "type": "page",
+    "title": "评论情感识别",
+    "body": {
+      "type": "wrapper",
+      "body": [{
+          "type": "form",
+          "title": "输入评论内容",
+          "api": "",
+          "controls": [{
+            "type": "textarea",
+            "name": "textarea",
+            "label": "用户评论：",
+            "minRows": 20
+          }],
+          "submitText": "打分"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "container",
+          "body": "这里是打分结果展示区域"
+        }
+      ]
+    }
+  }

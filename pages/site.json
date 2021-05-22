@@ -24,17 +24,28 @@
                 "schema": {
                   "type": "page",
                   "title": "评论情感识别",
-
                   "body": {
-                    "type": "form",
-                    "title": "",
-                    "wrapWithPanel": false,
-                    "api": "",
-                    "controls": [{
-                      "type": "text",
-                      "name": "text",
-                      "label": "评论内容："
-                    }]
+                    "type": "wrapper",
+                    "body": [{
+                        "type": "form",
+                        "title": "输入评论内容",
+                        "api": "",
+                        "controls": [{
+                          "type": "textarea",
+                          "name": "textarea",
+                          "label": "用户评论：",
+                          "minRows": 20
+                        }],
+                        "submitText": "打分"
+                      },
+                      {
+                        "type": "divider"
+                      },
+                      {
+                        "type": "container",
+                        "body": "这里是打分结果展示区域"
+                      }
+                    ]
                   }
                 }
               },
@@ -120,134 +131,6 @@
             "label": "OCR",
             "url": "imageIdentification3",
             "schemaApi": "/api/mock2/service/form?tpl=tpl3"
-          }
-        ]
-      },
-      {
-        "label": "Recommend",
-        "children": [{
-            "label": "内容风控",
-            "url": "index",
-            "icon": "fa fa-cube",
-            "schema": {
-              "type": "page",
-              "title": "内容风控",
-              "body": "内容风控"
-            },
-            "children": [{
-                "label": "评论情感识别",
-                "url": "motion",
-                "schema": {
-                  "type": "page",
-                  "title": "评论情感识别",
-
-                  "body": {
-                    "type": "form",
-                    "title": "",
-                    "wrapWithPanel": false,
-                    "api": "",
-                    "controls": [{
-                      "type": "text",
-                      "name": "text",
-                      "label": "评论内容："
-                    }]
-                  }
-                }
-              },
-              {
-                "label": "垃圾邮件识别",
-                "url": "eamil",
-                "schema": {
-                  "type": "page",
-                  "title": "垃圾邮件识别",
-                  "body": "垃圾邮件识别"
-                }
-              }
-            ]
-          },
-          {
-            "label": "内容生成",
-            "url": "contentCreate",
-            "icon": "fa fa-pencil",
-            "schema": {
-              "type": "page",
-              "title": "内容生成",
-              "body": "内容生成"
-            }
-          },
-          {
-            "label": "内容相似",
-            "url": "contentSimlar",
-            "icon": "fa fa-flask",
-            "schema": {
-              "type": "page",
-              "title": "内容相似",
-              "body": "内容相似"
-            }
-          }
-        ]
-      },
-      {
-        "label": "SEARCH",
-        "children": [{
-            "label": "内容风控",
-            "url": "index",
-            "icon": "fa fa-cube",
-            "schema": {
-              "type": "page",
-              "title": "内容风控",
-              "body": "内容风控"
-            },
-            "children": [{
-                "label": "评论情感识别",
-                "url": "motion",
-                "schema": {
-                  "type": "page",
-                  "title": "评论情感识别",
-
-                  "body": {
-                    "type": "form",
-                    "title": "",
-                    "wrapWithPanel": false,
-                    "api": "",
-                    "controls": [{
-                      "type": "text",
-                      "name": "text",
-                      "label": "评论内容："
-                    }]
-                  }
-                }
-              },
-              {
-                "label": "垃圾邮件识别",
-                "url": "eamil",
-                "schema": {
-                  "type": "page",
-                  "title": "垃圾邮件识别",
-                  "body": "垃圾邮件识别"
-                }
-              }
-            ]
-          },
-          {
-            "label": "内容生成",
-            "url": "contentCreate",
-            "icon": "fa fa-pencil",
-            "schema": {
-              "type": "page",
-              "title": "内容生成",
-              "body": "内容生成"
-            }
-          },
-          {
-            "label": "内容相似",
-            "url": "contentSimlar",
-            "icon": "fa fa-flask",
-            "schema": {
-              "type": "page",
-              "title": "内容相似",
-              "body": "内容相似"
-            }
           }
         ]
       }

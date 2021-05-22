@@ -21535,7 +21535,7 @@ readers do not read off random characters that represent icons */
 :root {
   --black: #1c2b36;
   --white: #fff;
-  --primary: #7266ba;
+  --primary: #000;
   --primary-onHover: #5b4eac;
   --primary-onActive: #564aa3;
   --secondary: #6c757d;
@@ -29298,8 +29298,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .a-Table-table > tbody > tr.bg-primary {
-  background-color: #7266ba;
-  color: #f4f3f9;
+  background-color: #000;
+  color: #fff;
 }
 
 .amis-scope .a-Table-table > tbody > tr.bg-primary.lt,
@@ -29324,7 +29324,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-Table-table > tbody > tr.bg-primary.bg,
 .amis-scope .a-Table-table > tbody > tr.bg-primary .bg {
-  background-color: #7266ba;
+  background-color: #000;
 }
 
 .amis-scope .a-Table-table > tbody > tr.bg-primary a,
@@ -38772,8 +38772,8 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .bg-primary {
-  background-color: #7266ba;
-  color: #f4f3f9;
+  background-color: #000;
+  color: #fff;
 }
 
 .amis-scope .bg-primary.lt,
@@ -38798,7 +38798,7 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .bg-primary.bg,
 .amis-scope .bg-primary .bg {
-  background-color: #7266ba;
+  background-color: #000;
 }
 
 .amis-scope .bg-primary a,
@@ -39084,7 +39084,7 @@ readers do not read off random characters that represent icons */
 }
 
 .amis-scope .text-primary {
-  color: #7266ba;
+  color: #fff;
 }
 
 .amis-scope .text-primary-lt {
