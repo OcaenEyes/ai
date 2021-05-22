@@ -22283,10 +22283,7 @@ readers do not read off random characters that represent icons */
   --Layout-headerBar-borderBottom: none;
   --Layout-footer-height: 3.125rem;
   --Layout-nav--folded-height: 3.125rem;
-  --Layout-nav--folded-height: 3.125rem;
   --Layout-nav-height: 2.5rem;
-  --Layout-nav-height: 2.5rem;
-  --Layout-nav-lgHeight: 3.125rem;
   --Layout-nav-lgHeight: 3.125rem;
   --Layout-body-bg: var(--body-bg);
   --List--unsaved-heading-bg: #e8f0fe;
@@ -24135,7 +24132,8 @@ readers do not read off random characters that represent icons */
 
 .amis-scope .a-AsideNav-itemIcon {
   margin: calc( ( var(--Layout-nav-height) - var(--lineHeightBase) * var(--Layout-asideLink-fontSize) ) / -2 ) -0.625rem;
-  line-height: var(--Layout-nav-height);
+  /* line-height: var(--Layout-nav-height); */
+  line-height: 2.9rem;
   width: var(--Layout-nav-height);
   vertical-align: middle;
   float: left;

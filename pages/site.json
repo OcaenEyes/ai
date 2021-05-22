@@ -2,27 +2,25 @@
   "status": 0,
   "msg": "",
   "data": {
-    "pages": [
-      {
+    "pages": [{
         "label": "Home",
         "url": "/",
         "redirect": "/index"
       },
       {
         "label": "NLP",
-        "children": [
-          {
+        "children": [{
             "label": "内容风控",
             "url": "index",
+            "icon": "fa fa-cube",
             "schema": {
               "type": "page",
               "title": "内容风控",
               "body": "内容风控"
             },
-            "children": [
-              {
+            "children": [{
                 "label": "评论情感识别",
-                "url": "1",
+                "url": "motion",
                 "schema": {
                   "type": "page",
                   "title": "评论情感识别",
@@ -31,20 +29,18 @@
                     "type": "form",
                     "title": "",
                     "wrapWithPanel": false,
-                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/form/saveForm",
-                    "controls": [
-                      {
-                        "type": "text",
-                        "name": "name",
-                        "label": "姓名："
-                      }
-                    ]
+                    "api": "",
+                    "controls": [{
+                      "type": "text",
+                      "name": "text",
+                      "label": "评论内容："
+                    }]
                   }
                 }
               },
               {
                 "label": "垃圾邮件识别",
-                "url": "2",
+                "url": "eamil",
                 "schema": {
                   "type": "page",
                   "title": "垃圾邮件识别",
@@ -55,6 +51,8 @@
           },
           {
             "label": "内容生成",
+            "url": "contentCreate",
+            "icon": "fa fa-pencil",
             "schema": {
               "type": "page",
               "title": "内容生成",
@@ -63,6 +61,8 @@
           },
           {
             "label": "内容相似",
+            "url": "contentSimlar",
+            "icon": "fa fa-flask",
             "schema": {
               "type": "page",
               "title": "内容相似",
@@ -74,8 +74,7 @@
             "url": "/crud",
             "rewrite": "/crud/list",
             "icon": "fa fa-cube",
-            "children": [
-              {
+            "children": [{
                 "label": "列表",
                 "url": "/crud/list",
                 "icon": "fa fa-list",
@@ -103,9 +102,9 @@
       },
       {
         "label": "CV",
-        "children": [
-          {
+        "children": [{
             "label": "图像识别",
+            "url": "imageIdentification",
             "schema": {
               "type": "page",
               "title": "图像识别",
@@ -114,11 +113,141 @@
           },
           {
             "label": "图像识别",
+            "url": "imageIdentification2",
             "link": "http://baidu.gitee.io/amis"
           },
           {
-            "label": "图像识别",
+            "label": "OCR",
+            "url": "imageIdentification3",
             "schemaApi": "/api/mock2/service/form?tpl=tpl3"
+          }
+        ]
+      },
+      {
+        "label": "Recommend",
+        "children": [{
+            "label": "内容风控",
+            "url": "index",
+            "icon": "fa fa-cube",
+            "schema": {
+              "type": "page",
+              "title": "内容风控",
+              "body": "内容风控"
+            },
+            "children": [{
+                "label": "评论情感识别",
+                "url": "motion",
+                "schema": {
+                  "type": "page",
+                  "title": "评论情感识别",
+
+                  "body": {
+                    "type": "form",
+                    "title": "",
+                    "wrapWithPanel": false,
+                    "api": "",
+                    "controls": [{
+                      "type": "text",
+                      "name": "text",
+                      "label": "评论内容："
+                    }]
+                  }
+                }
+              },
+              {
+                "label": "垃圾邮件识别",
+                "url": "eamil",
+                "schema": {
+                  "type": "page",
+                  "title": "垃圾邮件识别",
+                  "body": "垃圾邮件识别"
+                }
+              }
+            ]
+          },
+          {
+            "label": "内容生成",
+            "url": "contentCreate",
+            "icon": "fa fa-pencil",
+            "schema": {
+              "type": "page",
+              "title": "内容生成",
+              "body": "内容生成"
+            }
+          },
+          {
+            "label": "内容相似",
+            "url": "contentSimlar",
+            "icon": "fa fa-flask",
+            "schema": {
+              "type": "page",
+              "title": "内容相似",
+              "body": "内容相似"
+            }
+          }
+        ]
+      },
+      {
+        "label": "SEARCH",
+        "children": [{
+            "label": "内容风控",
+            "url": "index",
+            "icon": "fa fa-cube",
+            "schema": {
+              "type": "page",
+              "title": "内容风控",
+              "body": "内容风控"
+            },
+            "children": [{
+                "label": "评论情感识别",
+                "url": "motion",
+                "schema": {
+                  "type": "page",
+                  "title": "评论情感识别",
+
+                  "body": {
+                    "type": "form",
+                    "title": "",
+                    "wrapWithPanel": false,
+                    "api": "",
+                    "controls": [{
+                      "type": "text",
+                      "name": "text",
+                      "label": "评论内容："
+                    }]
+                  }
+                }
+              },
+              {
+                "label": "垃圾邮件识别",
+                "url": "eamil",
+                "schema": {
+                  "type": "page",
+                  "title": "垃圾邮件识别",
+                  "body": "垃圾邮件识别"
+                }
+              }
+            ]
+          },
+          {
+            "label": "内容生成",
+            "url": "contentCreate",
+            "icon": "fa fa-pencil",
+            "schema": {
+              "type": "page",
+              "title": "内容生成",
+              "body": "内容生成"
+            }
+          },
+          {
+            "label": "内容相似",
+            "url": "contentSimlar",
+            "icon": "fa fa-flask",
+            "schema": {
+              "type": "page",
+              "title": "内容相似",
+              "body": "内容相似"
+            }
           }
         ]
       }

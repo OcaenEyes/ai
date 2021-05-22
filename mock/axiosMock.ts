@@ -1,5 +1,6 @@
 import axios from 'axios';
 import MockAdaptor  from 'axios-mock-adapter';
+import './customer.db'
 
 function wait(duration:number) {
     return new Promise((resovle) => {
@@ -55,3 +56,9 @@ export function init() {
         });
 
 }
+
+
+function __inline(arg0: string) {
+    throw new Error('Function not implemented.');
+}
+

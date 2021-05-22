@@ -25,6 +25,8 @@
     "reload": "^3.1.1"
   },
   "dependencies": {
-    "amis-editor": "^2.0.15-beta.10"
+    "amis-editor": "^2.0.15-beta.10",
+    "axios": "^0.21.1",
+    "axios-mock-adapter": "^1.19.0"
   }
 }
