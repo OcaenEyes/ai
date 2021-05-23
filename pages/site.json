@@ -19,22 +19,22 @@
               "body": "内容风控"
             },
             "children": [{
-                "label": "评论情感识别",
+                "label": "状态情感识别",
                 "url": "motion",
                 "schema": {
                   "type": "page",
-                  "title": "评论情感识别",
+                  "title": "状态情感识别",
                   "body": {
                     "type": "wrapper",
                     "body": [{
                         "type": "form",
-                        "title": "输入评论内容",
+                        "title": "输入状态内容",
                         "target": "ugcscore",
                         "autoFocus": true,
                         "controls": [{
                           "type": "textarea",
                           "name": "text",
-                          "label": "用户微博：",
+                          "label": "用户状态：",
                           "minRows": 20
                         }],
                         "submitText": "打分"
