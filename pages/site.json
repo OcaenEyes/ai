@@ -29,11 +29,12 @@
                     "body": [{
                         "type": "form",
                         "title": "输入评论内容",
-                        "api": "",
+                        "target": "ugcscore",
+                        "autoFocus": true,
                         "controls": [{
                           "type": "textarea",
-                          "name": "textarea",
-                          "label": "用户评论：",
+                          "name": "text",
+                          "label": "用户微博：",
                           "minRows": 20
                         }],
                         "submitText": "打分"
@@ -42,20 +43,80 @@
                         "type": "divider"
                       },
                       {
-                        "type": "container",
-                        "body": "这里是打分结果展示区域"
+                        "type": "service",
+                        "name": "ugcscore",
+                        "api": "post:http://127.0.0.1:5000/api/motion?text=${text}",
+                        "wrapperComponent": "pre",
+                        "body": {
+                          "type": "page",
+                          "body": [{
+                              "type": "container",
+                              "body": " <h4>这里是打分结果展示区域：</h4> "
+                            },
+                            {
+                              "type": "container",
+                              "body": "<h5>${pred_label}</h5>   "
+                            },
+                            {
+                              "type": "json",
+                              "source": "${labels}"
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
                 }
               },
+              
               {
                 "label": "垃圾邮件识别",
                 "url": "eamil",
                 "schema": {
                   "type": "page",
                   "title": "垃圾邮件识别",
-                  "body": "垃圾邮件识别"
+                  "body": {
+                    "type": "wrapper",
+                    "body": [{
+                      "type": "form",
+                      "title": "输入邮件内容",
+                      "target": "emailscore",
+                      "autoFocus": true,
+                      "controls": [{
+                        "type": "textarea",
+                        "name": "text",
+                        "label": "邮件内容：",
+                        "minRows": 20
+                      }],
+                      "submitText": "打分"
+                    },
+                    {
+                      "type": "divider"
+                    },
+                    {
+                      "type": "service",
+                      "name": "emailscore",
+                      "api": "post:http://127.0.0.1:5000/api/email?text=${text}",
+                      "wrapperComponent": "pre",
+                      "body": {
+                        "type": "page",
+                        "body": [{
+                            "type": "container",
+                            "body": " <h4>这里是打分结果展示区域：</h4> "
+                          },
+                          {
+                            "type": "container",
+                            "body": "<h5>${pred_label}</h5>   "
+                          },
+                          {
+                            "type": "json",
+                            "source": "${labels}"
+                          }
+                        ]
+                      }
+                    }
+                    ]
+                  }
                 }
               }
             ]
@@ -67,7 +128,7 @@
             "schema": {
               "type": "page",
               "title": "内容生成",
-              "body": "内容生成"
+              "body": "功能开发中"
             }
           },
           {
@@ -77,60 +138,33 @@
             "schema": {
               "type": "page",
               "title": "内容相似",
-              "body": "内容相似"
+              "body": "功能开发中"
             }
-          },
-          {
-            "label": "列表示例",
-            "url": "/crud",
-            "rewrite": "/crud/list",
-            "icon": "fa fa-cube",
-            "children": [{
-                "label": "列表",
-                "url": "/crud/list",
-                "icon": "fa fa-list",
-                "schemaApi": "get:/pages/crud-list.json"
-              },
-              {
-                "label": "新增",
-                "url": "/crud/new",
-                "icon": "fa fa-plus",
-                "schemaApi": "get:/pages/crud-new.json"
-              },
-              {
-                "label": "查看",
-                "url": "/crud/:id",
-                "schemaApi": "get:/pages/crud-view.json"
-              },
-              {
-                "label": "修改",
-                "url": "/crud/:id/edit",
-                "schemaApi": "get:/pages/crud-edit.json"
-              }
-            ]
           }
+
         ]
       },
       {
         "label": "CV",
         "children": [{
-            "label": "图像识别",
-            "url": "imageIdentification",
+            "label": "OCR",
+            "url": "OCR",
+            "icon":"fa fa-camera",
             "schema": {
               "type": "page",
               "title": "图像识别",
-              "body": "图像识别"
+              "body": "功能开发中"
             }
           },
           {
-            "label": "图像识别",
-            "url": "imageIdentification2",
-            "link": "http://baidu.gitee.io/amis"
-          },
-          {
-            "label": "OCR",
-            "url": "imageIdentification3",
-            "schemaApi": "/api/mock2/service/form?tpl=tpl3"
+            "label": "手写字识别",
+            "url": "MNIST",
+            "icon":"fa fa-bookmark",
+            "schema": {
+              "type": "page",
+              "title": "手写字识别",
+              "body": "功能开发中"
+            }
           }
         ]
       }
