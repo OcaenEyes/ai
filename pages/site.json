@@ -69,7 +69,7 @@
                       {
                         "type": "service",
                         "name": "ugcscore",
-                        "api": "post:http://127.0.0.1:5000/api/motion?text=${text}",
+                        "api": "post:http://localhost:5000/api/motion?text=${text}",
                         "wrapperComponent": "pre",
                         "body": {
                           "type": "page",
@@ -120,7 +120,7 @@
                       {
                         "type": "service",
                         "name": "emailscore",
-                        "api": "post:http://127.0.0.1:5000/api/email?text=${text}",
+                        "api": "post:http://localhost:5000/api/email?text=${text}",
                         "wrapperComponent": "pre",
                         "body": {
                           "type": "page",
