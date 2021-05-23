@@ -16,7 +16,31 @@
             "schema": {
               "type": "page",
               "title": "内容风控",
-              "body": "内容风控"
+              "body": {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "container",
+                    "body": "<h1>内容风控</h1>"
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3>作者：OCEAN.ZY </h3>"
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3><a href='https://pmhub.oceangzy.top/' target='_blank'>PMhub网址导航</a></h3> "
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3><a href='https://github.com/OcaenEyes' target='_blank'>Github</a></h3>"
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3><a href='https://oceaneyes.top' target='_blank'>OCEAN.ZY博客</a></h3>"
+                  }
+                ]
+              }
             },
             "children": [{
                 "label": "状态情感识别",
@@ -68,7 +92,7 @@
                   }
                 }
               },
-              
+
               {
                 "label": "垃圾邮件识别",
                 "url": "eamil",
@@ -78,43 +102,43 @@
                   "body": {
                     "type": "wrapper",
                     "body": [{
-                      "type": "form",
-                      "title": "输入邮件内容",
-                      "target": "emailscore",
-                      "autoFocus": true,
-                      "controls": [{
-                        "type": "textarea",
-                        "name": "text",
-                        "label": "邮件内容：",
-                        "minRows": 20
-                      }],
-                      "submitText": "打分"
-                    },
-                    {
-                      "type": "divider"
-                    },
-                    {
-                      "type": "service",
-                      "name": "emailscore",
-                      "api": "post:http://127.0.0.1:5000/api/email?text=${text}",
-                      "wrapperComponent": "pre",
-                      "body": {
-                        "type": "page",
-                        "body": [{
-                            "type": "container",
-                            "body": " <h4>这里是打分结果展示区域：</h4> "
-                          },
-                          {
-                            "type": "container",
-                            "body": "<h5>${pred_label}</h5>   "
-                          },
-                          {
-                            "type": "json",
-                            "source": "${labels}"
-                          }
-                        ]
+                        "type": "form",
+                        "title": "输入邮件内容",
+                        "target": "emailscore",
+                        "autoFocus": true,
+                        "controls": [{
+                          "type": "textarea",
+                          "name": "text",
+                          "label": "邮件内容：",
+                          "minRows": 20
+                        }],
+                        "submitText": "打分"
+                      },
+                      {
+                        "type": "divider"
+                      },
+                      {
+                        "type": "service",
+                        "name": "emailscore",
+                        "api": "post:http://127.0.0.1:5000/api/email?text=${text}",
+                        "wrapperComponent": "pre",
+                        "body": {
+                          "type": "page",
+                          "body": [{
+                              "type": "container",
+                              "body": " <h4>这里是打分结果展示区域：</h4> "
+                            },
+                            {
+                              "type": "container",
+                              "body": "<h5>${pred_label}</h5>   "
+                            },
+                            {
+                              "type": "json",
+                              "source": "${labels}"
+                            }
+                          ]
+                        }
                       }
-                    }
                     ]
                   }
                 }
@@ -149,7 +173,7 @@
         "children": [{
             "label": "OCR",
             "url": "OCR",
-            "icon":"fa fa-camera",
+            "icon": "fa fa-camera",
             "schema": {
               "type": "page",
               "title": "图像识别",
@@ -159,7 +183,7 @@
           {
             "label": "手写字识别",
             "url": "MNIST",
-            "icon":"fa fa-bookmark",
+            "icon": "fa fa-bookmark",
             "schema": {
               "type": "page",
               "title": "手写字识别",
