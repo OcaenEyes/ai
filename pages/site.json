@@ -2,14 +2,16 @@
   "status": 0,
   "msg": "",
   "data": {
-    "pages": [{
+    "pages": [
+      {
         "label": "Home",
         "url": "/",
         "redirect": "/index"
       },
       {
         "label": "NLP",
-        "children": [{
+        "children": [
+          {
             "label": "内容风控",
             "url": "index",
             "icon": "fa fa-cube",
@@ -42,7 +44,8 @@
                 ]
               }
             },
-            "children": [{
+            "children": [
+              {
                 "label": "状态情感识别",
                 "url": "motion",
                 "schema": {
@@ -50,17 +53,20 @@
                   "title": "状态情感识别",
                   "body": {
                     "type": "wrapper",
-                    "body": [{
+                    "body": [
+                      {
                         "type": "form",
                         "title": "输入状态内容",
                         "target": "ugcscore",
                         "autoFocus": true,
-                        "controls": [{
-                          "type": "textarea",
-                          "name": "text",
-                          "label": "用户状态：",
-                          "minRows": 20
-                        }],
+                        "controls": [
+                          {
+                            "type": "textarea",
+                            "name": "text",
+                            "label": "用户状态：",
+                            "minRows": 20
+                          }
+                        ],
                         "submitText": "打分"
                       },
                       {
@@ -69,11 +75,12 @@
                       {
                         "type": "service",
                         "name": "ugcscore",
-                        "api": "post:http://localhost:5000/api/motion?text=${text}",
+                        "api": "post:http://ai.oceangzy.top/api/motion?text=${text}",
                         "wrapperComponent": "pre",
                         "body": {
                           "type": "page",
-                          "body": [{
+                          "body": [
+                            {
                               "type": "container",
                               "body": " <h4>这里是打分结果展示区域：</h4> "
                             },
@@ -92,7 +99,6 @@
                   }
                 }
               },
-
               {
                 "label": "垃圾邮件识别",
                 "url": "eamil",
@@ -101,17 +107,20 @@
                   "title": "垃圾邮件识别",
                   "body": {
                     "type": "wrapper",
-                    "body": [{
+                    "body": [
+                      {
                         "type": "form",
                         "title": "输入邮件内容",
                         "target": "emailscore",
                         "autoFocus": true,
-                        "controls": [{
-                          "type": "textarea",
-                          "name": "text",
-                          "label": "邮件内容：",
-                          "minRows": 20
-                        }],
+                        "controls": [
+                          {
+                            "type": "textarea",
+                            "name": "text",
+                            "label": "邮件内容：",
+                            "minRows": 20
+                          }
+                        ],
                         "submitText": "打分"
                       },
                       {
@@ -120,11 +129,12 @@
                       {
                         "type": "service",
                         "name": "emailscore",
-                        "api": "post:http://localhost:5000/api/email?text=${text}",
+                        "api": "post:http://ai.oceangzy.top/api/email?text=${text}",
                         "wrapperComponent": "pre",
                         "body": {
                           "type": "page",
-                          "body": [{
+                          "body": [
+                            {
                               "type": "container",
                               "body": " <h4>这里是打分结果展示区域：</h4> "
                             },
@@ -153,7 +163,119 @@
               "type": "page",
               "title": "内容生成",
               "body": "功能开发中"
-            }
+            },
+            "children": [
+              {
+                "label": "古诗自动生成",
+                "url": "poetry",
+                "schema": {
+                  "type": "page",
+                  "title": "来写首诗吧~",
+                  "body": {
+                    "type": "wrapper",
+                    "body": [
+                      {
+                        "type": "form",
+                        "className": "m-b",
+                        "title":"开始写诗",
+                        "target":"poetryRes",
+                        "body": [
+                          {
+                            "type": "property",
+                            "title": "写诗配置",
+                            "items": [
+                              {
+                                "label": "模式",
+                                "content": {
+                                  "type": "select",
+                                  "name": "mode",
+                                  "value": 1,
+                                  "options": [
+                                    {
+                                      "label": "随机生成-无需输入",
+                                      "value": 1
+                                    },
+                                    {
+                                      "label": "单字生成-只截取第1个字",
+                                      "value":2
+                                    },
+                                    {
+                                      "label": "多字藏头诗-只截取前4个字",
+                                      "value": 3
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "label": "生成篇数",
+                                "content": {
+                                  "type": "select",
+                                  "name": "num",
+                                  "value": 3,
+                                  "options": [
+                                    {
+                                      "label": "1",
+                                      "value": 1
+                                    },
+                                    {
+                                      "label": "3",
+                                      "value": 3
+                                    },
+                                    {
+                                      "label": "5",
+                                      "value": 5
+                                    }
+                                  ]
+                                }
+                              },
+                              
+                              {
+                                "label": "关键字",
+                                "content": {
+                                  "type": "input-text",
+                                  "name": "text",
+                                  "placeholder": "可输入关键字，当为生成模式是随机时输入无效~"
+                                },
+                                "span": 3
+                              }
+                            ]
+                          }
+                        ],
+                        "submitText": "为我写诗"
+                      },
+        
+                      {
+                        "type": "divider"
+                      },
+                      {
+                        "type": "service",
+                        "name": "poetryRes",
+                        "api": "http://127.0.0.1:5003/api/v0.1/poetry?mode=${mode}&text=${text}&num=${num}",
+                        "wrapperComponent": "pre",
+                        "body": {
+                          "type": "page",
+                          "body": [
+                            {
+                              "type": "container",
+                              "body": " <h4>这里是诗词展示区域：</h4> "
+                            },
+                            {
+                              "type": "container",
+                              "body": "<h5>${res.state}</h5>   "
+                            },
+                            {
+                              "type": "json",
+                              "levelExpand":2,
+                              "source": "${res.poetry}"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           },
           {
             "label": "内容相似",
@@ -165,12 +287,12 @@
               "body": "功能开发中"
             }
           }
-
         ]
       },
       {
         "label": "CV",
-        "children": [{
+        "children": [
+          {
             "label": "OCR",
             "url": "OCR",
             "icon": "fa fa-camera",
