@@ -75,7 +75,7 @@
                       {
                         "type": "service",
                         "name": "ugcscore",
-                        "api": "post:http://ai.oceangzy.top/api/motion?text=${text}",
+                        "api": "post:http://127.0.0.1/api/motion?text=${text}",
                         "wrapperComponent": "pre",
                         "body": {
                           "type": "page",
