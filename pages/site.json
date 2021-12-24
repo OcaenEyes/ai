@@ -12,18 +12,18 @@
         "label": "NLP",
         "children": [
           {
-            "label": "内容风控",
+            "label": "文本风控",
             "url": "index",
             "icon": "fa fa-cube",
             "schema": {
               "type": "page",
-              "title": "内容风控",
+              "title": "文本风控",
               "body": {
                 "type": "wrapper",
                 "body": [
                   {
                     "type": "container",
-                    "body": "<h1>内容风控</h1>"
+                    "body": "<h1>文本风控</h1>"
                   },
                   {
                     "type": "container",
@@ -156,13 +156,37 @@
             ]
           },
           {
-            "label": "内容生成",
+            "label": "文本生成",
             "url": "contentCreate",
             "icon": "fa fa-pencil",
             "schema": {
               "type": "page",
-              "title": "内容生成",
-              "body": "功能开发中"
+              "title": "文本生成",
+              "body": {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "container",
+                    "body": "<h1>文本生成</h1>"
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3>作者：OCEAN.ZY </h3>"
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3><a href='https://pmhub.oceangzy.top/' target='_blank'>PMhub网址导航</a></h3> "
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3><a href='https://github.com/OcaenEyes' target='_blank'>Github</a></h3>"
+                  },
+                  {
+                    "type": "container",
+                    "body": "<h3><a href='https://oceaneyes.top' target='_blank'>OCEAN.ZY博客</a></h3>"
+                  }
+                ]
+              }
             },
             "children": [
               {
