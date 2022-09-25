@@ -298,6 +298,11 @@
                     ]
                   }
                 }
+              },
+              {
+                "label": "聊天机器人",
+                "link": "http://ai.oceangzy.top/generator/chat"
+                
               }
             ]
           },
